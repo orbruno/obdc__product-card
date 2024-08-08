@@ -19,16 +19,13 @@ require_once plugin_dir_path(__FILE__) . 'src/obdc__product-card-grid.php';
 
 // load js file to update form action on product card
 function enqueue_obdc_product_card_update_form_action_script() {
-    // Enqueue the script
     wp_enqueue_script(
         'obdc-product-card-update-form-action', // Handle
-        plugins_url('/includes/js/obdc__product-card__update-form-action.js'), // URL with js file
+        plugins_url('includes/js/obdc__product-card__update-form-action.js', __FILE__), // Correct URL to js file
         array(), // Dependencies
         '1.0.0', // Version number
-        array(
-            'strategy'  => 'defer',
-            'in_footer' => true,
-            )
+        true, // Load script in footer
+        array( 'defer' => true ) // Add defer attribute
     );
 }
 
