@@ -41,7 +41,7 @@ function display_product_card($product_id, $producer_id)
     $product_name = $product->get_name();
     $product_weight = $product->get_attribute("peso"); // Assuming wc_peso_text returns the desired custom text
     $product_permalink = get_permalink($product->get_id());
-    $product_image = wp_get_attachment_image_src(
+    $product_image_url = wp_get_attachment_image_src(
         get_post_thumbnail_id($product->get_id()),
         "single-post-thumbnail"
     )[0];
@@ -56,9 +56,9 @@ function display_product_card($product_id, $producer_id)
     <div class="product-card">
             <a href="<?php echo esc_url(
                 $product_permalink
-            ); ?>" class="product-card__image-wrapper padding--xs">
-                <img class="product-card__image" src="<?php echo esc_url(
-                    $product_image
+            ); ?>" class="product-card__image-wrapper">
+                <img src="<?php echo esc_url(
+                    $product_image_url
                 ); ?>" alt="<?php echo esc_attr($product_name); ?>">
             </a>
             <h3 class="product-card__name text--bold text--s text--primary text--link">

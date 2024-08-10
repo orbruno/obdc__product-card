@@ -35,10 +35,11 @@ function enqueue_obdc_product_card_styles() {
         'obdc-product-card-style', // Handle
         plugins_url('includes/css/obdc__product-card__style.css', __FILE__), // Correct URL to css file
         array(), // Dependencies (if any, like Bootstrap or other styles)
-        '1.0.0', // Version number
+        '1.1.8', // Version number
         'all' // Media type (e.g., 'all', 'screen', 'print', etc.)
     );
 }
+
 
 // Hook into WordPress
 add_action('wp_enqueue_scripts', 'enqueue_obdc_product_card_styles');
