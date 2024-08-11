@@ -35,7 +35,7 @@ function enqueue_obdc_product_card_styles() {
         'obdc-product-card-style', // Handle
         plugins_url('includes/css/obdc__product-card__style.css', __FILE__), // Correct URL to css file
         array(), // Dependencies (if any, like Bootstrap or other styles)
-        '1.1.16', // Version number
+        '1.1.21', // Version number
         'all' // Media type (e.g., 'all', 'screen', 'print', etc.)
     );
 }

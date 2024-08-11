@@ -2,7 +2,7 @@
   display: grid;
   /* we have to be careful with this, it mucks with the tab order */
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
   gap: var(--space-s);
   grid-auto-rows: var(--section-space-xl) auto auto auto;
   /* container-type: inline-size; */
@@ -33,11 +33,11 @@
 
 .product-card img {
   width: 100%;
-  height: calc(var(--section-space-xl));
-  /* height: calc(var(--section-space-l) - (2 * var(--_padding))); */
+  /* height: calc(var(--section-space-xl)); */
+  height: calc(var(--section-space-xl) - var(--_padding));
   /* calculate the height of the containair minus an xs padding */
   object-fit: contain;
-  /* padding: var(--space-xs) 0em var(--space-xs) 0em; */
+  padding: var(--_padding) 0em 0em 0em;
 }
 
 .add-to-cart-button__form-wrapper--variable > select {
