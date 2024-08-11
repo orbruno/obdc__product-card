@@ -2,10 +2,10 @@
   display: grid;
   /* we have to be careful with this, it mucks with the tab order */
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
   gap: var(--space-s);
-  grid-auto-rows: var(--section-space-l) auto auto auto;
-  container-type: inline-size;
+  grid-auto-rows: var(--section-space-xl) auto auto auto;
+  /* container-type: inline-size; */
 }
 
 .product-card {
@@ -33,7 +33,7 @@
 
 .product-card img {
   width: 100%;
-  height: 100%;
+  height: calc(var(--section-space-xl));
   /* height: calc(var(--section-space-l) - (2 * var(--_padding))); */
   /* calculate the height of the containair minus an xs padding */
   object-fit: contain;
